@@ -144,13 +144,36 @@
 //    Console.Write(numero + " ");
 //}
 
-//Snack 8 Array
-int[] numeriInteri = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+////Snack 8 Array
+//int[] numeriInteri = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//int somma = 0;
+//for (int i = 0; i < numeriInteri.Length; i++) {
+//    if (i % 2 != 0)
+//    {
+//        somma += numeriInteri[i];
+//    }
+//}               
+//Console.WriteLine(somma);
+
+
+//Snack 9 Ciclo While
+int[] numeri = new int[0];
 int somma = 0;
-for (int i = 0; i < numeriInteri.Length; i++) {
-    if (i % 2 != 0)
-    {
-        somma += numeriInteri[i];
-    }
-}               
+
+while (somma < 50)
+{
+    Console.WriteLine("Inserisci un numero:");
+    int numero = int.Parse(Console.ReadLine());
+    somma += numero;
+
+    Array.Resize(ref numeri, numeri.Length + 1);
+    numeri[numeri.Length - 1] = numero;
+}
+
+Console.WriteLine("Somma degli elementi:");
 Console.WriteLine(somma);
+Console.WriteLine("Numeri inseriti nell'array:");
+foreach (int numero in numeri)
+{
+    Console.Write(numero + " ");
+}
