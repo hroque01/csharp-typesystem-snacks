@@ -123,23 +123,34 @@
 //}
 
 
-//Snack 7 Array
-int[] numeriDispari = new int[0];
+////Snack 7 Array
+//int[] numeriDispari = new int[0];
 
-for (int i = 0; i < 6; i++)
-{
-    Console.Write($"Inserisci il {i + 1}° numero dispari: ");
-    int numero = int.Parse(Console.ReadLine());
+//for (int i = 0; i < 6; i++)
+//{
+//    Console.Write("Inserisci i numeri: ");
+//    int numero = int.Parse(Console.ReadLine());
 
-    if (numero % 2 != 0)
+//    if (numero % 2 != 0)
+//    {
+//        Array.Resize(ref numeriDispari, numeriDispari.Length + 1);
+//        numeriDispari[numeriDispari.Length - 1] = numero;
+//    }
+//}
+
+//Console.WriteLine("Numeri dispari inseriti:");
+//foreach (int numero in numeriDispari)
+//{
+//    Console.Write(numero + " ");
+//}
+
+//Snack 8 Array
+int[] numeriInteri = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int somma = 0;
+for (int i = 0; i < numeriInteri.Length; i++) {
+    if (i % 2 != 0)
     {
-        Array.Resize(ref numeriDispari, numeriDispari.Length + 1);
-        numeriDispari[numeriDispari.Length - 1] = numero;
+        somma += numeriInteri[i];
     }
-}
-
-Console.WriteLine("Numeri dispari inseriti:");
-foreach (int numero in numeriDispari)
-{
-    Console.Write(numero + " ");
-}
+}               
+Console.WriteLine(somma);
