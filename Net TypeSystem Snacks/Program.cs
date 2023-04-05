@@ -1,6 +1,6 @@
 ﻿//Snack 1 Istruzioni condizionali
 Console.Write("Inserisci un numero: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
+int num1 = int.Parse(Console.ReadLine());
 
 Console.Write("Inserisci un numero: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
@@ -46,5 +46,7 @@ else
 //}
 //Console.WriteLine("La somma di tutti i numeri inseriti è: " + somma);
 
+
+//Snack 4 Ciclo for
 
 
