@@ -1,18 +1,35 @@
-﻿//Snack 1 Istruzioni condizionali
-Console.Write("Inserisci un numero: ");
-int num1 = int.Parse(Console.ReadLine());
+﻿////Snack 1 Istruzioni condizionali
+//int num1, num2;
+//bool isNum1Valid, isNum2Valid;
 
-Console.Write("Inserisci un numero: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+//do
+//{
+//    Console.Write("Inserisci il primo numero: ");
+//    isNum1Valid = int.TryParse(Console.ReadLine(), out num1);
+//    if (!isNum1Valid)
+//    {
+//        Console.WriteLine("Il valore inserito non è un numero intero valido. Riprova.");
+//    }
+//} while (!isNum1Valid);
 
-if (num1 < num2)
-{
-    Console.WriteLine($"il numero piu piccolo e': {num1}");
-}
-else
-{
-    Console.WriteLine($"il numero piu piccolo e': {num2}");
-}
+//do
+//{
+//    Console.Write("Inserisci il secondo numero: ");
+//    isNum2Valid = int.TryParse(Console.ReadLine(), out num2);
+//    if (!isNum2Valid)
+//    {
+//        Console.WriteLine("Il valore inserito non è un numero intero valido. Riprova.");
+//    }
+//} while (!isNum2Valid);
+
+//if (num1 < num2)
+//{
+//    Console.WriteLine($"Il numero più piccolo è: {num1}");
+//}
+//else
+//{
+//    Console.WriteLine($"Il numero più piccolo è: {num2}");
+//}
 
 
 ////Snack 2 Istruzioni condizionali
@@ -29,9 +46,13 @@ else
 //    Console.WriteLine($"La parola piu' corta e': {parola1}");
 //}
 
-//else
+//else if
 //{
 //    Console.WriteLine($"La parola piu' corta e': {parola2}");
+//}
+//else
+//{
+//    Console.WriteLine("Le parole sono lunghe uguali");
 //}
 
 
@@ -48,5 +69,18 @@ else
 
 
 //Snack 4 Ciclo for
+int somma = 0;
+for (int i = 2; i < 11; i++)
+{
+    Console.WriteLine(i);
+    somma += i;
+
+}
+Console.WriteLine("La somma di tutti i numeri inseriti è: " + somma);
+
+int mediana = somma / 9;
+Console.WriteLine("La mediana di tutti i numeri inseriti è: " + mediana);
+
+
 
 
