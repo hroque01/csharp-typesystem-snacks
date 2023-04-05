@@ -107,17 +107,39 @@
 //}
 
 
-//Snack 6 Array
-string[] invitati = { "Davide", "Andrea", "Igor", "Romina", "Vale", "Marco" };
+////Snack 6 Array
+//string[] invitati = { "Davide", "Andrea", "Igor", "Romina", "Vale", "Marco" };
 
-Console.Write("Inserisci il tuo nome: ");
-string persona = Console.ReadLine();
+//Console.Write("Inserisci il tuo nome: ");
+//string persona = Console.ReadLine();
 
-if (invitati.Contains(persona))
+//if (invitati.Contains(persona))
+//{
+//    Console.WriteLine("Puoi entrare alla festa");
+//}
+//else
+//{
+//    Console.WriteLine("Non puoi entrare alla festa");
+//}
+
+
+//Snack 7 Array
+int[] numeriDispari = new int[0];
+
+for (int i = 0; i < 6; i++)
 {
-    Console.WriteLine("Puoi entrare alla festa");
+    Console.Write($"Inserisci il {i + 1}° numero dispari: ");
+    int numero = int.Parse(Console.ReadLine());
+
+    if (numero % 2 != 0)
+    {
+        Array.Resize(ref numeriDispari, numeriDispari.Length + 1);
+        numeriDispari[numeriDispari.Length - 1] = numero;
+    }
 }
-else
+
+Console.WriteLine("Numeri dispari inseriti:");
+foreach (int numero in numeriDispari)
 {
-    Console.WriteLine("Non puoi entrare alla festa");
+    Console.Write(numero + " ");
 }
