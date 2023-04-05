@@ -156,24 +156,41 @@
 //Console.WriteLine(somma);
 
 
-//Snack 9 Ciclo While
-int[] numeri = new int[0];
-int somma = 0;
+////Snack 9 Ciclo While
+//int[] numeri = new int[0];
+//int somma = 0;
 
-while (somma < 50)
+//while (somma < 50)
+//{
+//    Console.WriteLine("Inserisci un numero:");
+//    int numero = int.Parse(Console.ReadLine());
+//    somma += numero;
+
+//    Array.Resize(ref numeri, numeri.Length + 1);
+//    numeri[numeri.Length - 1] = numero;
+//}
+
+//Console.WriteLine("Somma degli elementi:");
+//Console.WriteLine(somma);
+//Console.WriteLine("Numeri inseriti nell'array:");
+//foreach (int numero in numeri)
+//{
+//    Console.Write(numero + " ");
+//}
+
+
+//Snack 10 Random
+Console.Write("Inserisci un numero: ");
+int n = int.Parse(Console.ReadLine());
+
+Random numRandom = new Random();
+
+for (int i = 0; i < n; i++)
 {
-    Console.WriteLine("Inserisci un numero:");
-    int numero = int.Parse(Console.ReadLine());
-    somma += numero;
-
-    Array.Resize(ref numeri, numeri.Length + 1);
-    numeri[numeri.Length - 1] = numero;
-}
-
-Console.WriteLine("Somma degli elementi:");
-Console.WriteLine(somma);
-Console.WriteLine("Numeri inseriti nell'array:");
-foreach (int numero in numeri)
-{
-    Console.Write(numero + " ");
+    int[] array = new int[10];
+    for (int num = 0; num < 10; num++)
+    {
+        array[num] = numRandom.Next(1, 101);
+    }
+    Console.WriteLine("Array #" + (i + 1) + ": " + string.Join(", ", array));
 }
