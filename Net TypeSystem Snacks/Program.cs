@@ -149,17 +149,16 @@ foreach (int numero in numeriDispari)
 //Snack 8 Array
 int[] numeriInteri = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 int somma = 0;
-for (int i = 0; i < numeriInteri.Length; i++)
-{
+for (int i = 0; i < numeriInteri.Length; i++) {
     if (i % 2 != 0)
     {
         somma += numeriInteri[i];
     }
-}
+}               
 Console.WriteLine(somma);
 
 
-/******************************* Snack 9 Ciclo While *********************************************/
+//Snack 9 Ciclo While
 int[] numeri = new int[0];
 int somma = 0;
 
@@ -182,7 +181,7 @@ foreach (int numero in numeri)
 }
 
 
-/******************************* Snack 10 Random *********************************************/
+//Snack 10 Random
 Console.Write("Inserisci un numero: ");
 int n = int.Parse(Console.ReadLine());
 
