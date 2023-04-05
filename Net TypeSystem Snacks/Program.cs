@@ -82,29 +82,42 @@
 //Console.WriteLine("La mediana di tutti i numeri inseriti è: " + mediana);
 
 
-//Snack 5 Operatore Modulo
-int num;
-bool isNumValid;
+////Snack 5 Operatore Modulo
+//int num;
+//bool isNumValid;
 
-do
-{
-    Console.Write("Inserisci un numero: ");
-    isNumValid = int.TryParse(Console.ReadLine(), out num);
+//do
+//{
+//    Console.Write("Inserisci un numero: ");
+//    isNumValid = int.TryParse(Console.ReadLine(), out num);
 
-    if(!isNumValid)
-    {
-        Console.WriteLine("Il valore inserito non è un numero intero valido. Riprova.");
-    }
-} while (!isNumValid);
+//    if (!isNumValid)
+//    {
+//        Console.WriteLine("Il valore inserito non è un numero intero valido. Riprova.");
+//    }
+//} while (!isNumValid);
 
-if (num % 2 == 0)
+//if (num % 2 == 0)
+//{
+//    Console.WriteLine("Il valore inserito è pari");
+//}
+//else
+//{
+//    Console.WriteLine("Il valore inserito è dispari");
+//}
+
+
+//Snack 6 Array
+string[] invitati = { "Davide", "Andrea", "Igor", "Romina", "Vale", "Marco" };
+
+Console.Write("Inserisci il tuo nome: ");
+string persona = Console.ReadLine();
+
+if (invitati.Contains(persona))
 {
-    Console.WriteLine("Il valore inserito è pari");
-} else
-{
-    Console.WriteLine("Il valore inserito è dispari");
+    Console.WriteLine("Puoi entrare alla festa");
 }
-
-
-
-
+else
+{
+    Console.WriteLine("Non puoi entrare alla festa");
+}
