@@ -68,18 +68,42 @@
 //Console.WriteLine("La somma di tutti i numeri inseriti è: " + somma);
 
 
-//Snack 4 Ciclo for
-int somma = 0;
-for (int i = 2; i < 11; i++)
+////Snack 4 Ciclo for
+//int somma = 0;
+//for (int i = 2; i < 11; i++)
+//{
+//    Console.WriteLine(i);
+//    somma += i;
+
+//}
+//Console.WriteLine("La somma di tutti i numeri inseriti è: " + somma);
+
+//int mediana = somma / 9;
+//Console.WriteLine("La mediana di tutti i numeri inseriti è: " + mediana);
+
+
+//Snack 5 Operatore Modulo
+int num;
+bool isNumValid;
+
+do
 {
-    Console.WriteLine(i);
-    somma += i;
+    Console.Write("Inserisci un numero: ");
+    isNumValid = int.TryParse(Console.ReadLine(), out num);
 
+    if(!isNumValid)
+    {
+        Console.WriteLine("Il valore inserito non è un numero intero valido. Riprova.");
+    }
+} while (!isNumValid);
+
+if (num % 2 == 0)
+{
+    Console.WriteLine("Il valore inserito è pari");
+} else
+{
+    Console.WriteLine("Il valore inserito è dispari");
 }
-Console.WriteLine("La somma di tutti i numeri inseriti è: " + somma);
-
-int mediana = somma / 9;
-Console.WriteLine("La mediana di tutti i numeri inseriti è: " + mediana);
 
 
 
